@@ -1,0 +1,32 @@
+body{
+	background-color: #009688 !important;
+}
+header{
+	text-align: center;
+	font-size: 35px;
+	font-style: arial;
+	padding-top: 30px;
+}
+.task input{
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+.task div{
+	margin-bottom: 20px;
+	margin-top: 10px;
+	font-size: 16px;
+}
+.table{
+	margin-top: 30px;
+	border: 1px solid black;
+}
+input button{
+	margin-top: 20px;
+}
+.bgcolor{
+	background-color: #8a6d3b;
+}
+.task{
+	padding: 50px;
+	padding-bottom: 200px;
+}

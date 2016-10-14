@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise-1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="node_modules/angular/angular.js"></script>
+  	<script src="node_modules/angular-translate/dist/angular-translate.js"></script>
+  	<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+  	<script src="node_modules/angular-mocks/angular-mocks.js"></script>
+  	<script type="text/javascript" src="script/app.js"></script>
+  	<script type="text/javascript" src="script/factory.js"></script>
+  	
+</head> 
+<body ng-app="myApp">
+	<div  class="container">
+		<div class="row" ng-controller="myController" >
+			<header class="col-xs-12" id="{{heading}}">{{'heading'|translate}}</header>
+			<select ng-model="lang" ng-change="lang1()">
+				<option value="en">{{'english'|translate}}</option>
+				<option value="ko">{{'korean'|translate}}</option>
+			</select>
+			<div class="col-xs-12" ><input class="pull-right" type="button" value="{{'add'|translate}}" ng-click="add1()"></div>
+			
+			<table class="col-xs-12 table">
+				<tr>
+					<td class="col-xs-1">#</td>
+					<td class="col-xs-2">{{'taskid'|translate}}</td>
+					<td class="col-xs-3">{{'taskname'|translate}}</td>
+					<td class="col-xs-3">{{'markcompleted'|translate}}</td>
+					<td class="col-xs-3">{{'removetask'|translate}}</td>
+				</tr>
+				<tr ng-repeat="x in taskarr" ng-class="{bgcolor:value1}">
+				    <td class="col-xs-1" ng-model="index">{{$index + 1}}</td>
+				    <td class="col-xs-2" >{{x.id }}</td>
+				    <td class="col-xs-3">{{x.name}}</td>
+				    <td class="col-xs-3"><input type="checkbox" ng-model="value1"></td>
+				    <td class="col-xs-3"><button ng-click="remove(x.id)">{{'remove'|translate}}</button></td>
+				</tr>
+			</table>
+		</div>
+				
+	</div>
+</body>
+</html> 

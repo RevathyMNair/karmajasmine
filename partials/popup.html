@@ -1,0 +1,11 @@
+
+
+<div class="task">
+	<form ng-submit="addme()">
+		<div class="col-xs-2">{{'taskid'|translate}}</div><input class="col-xs-10 pull-right" ng-model="id" type="text" required ng-pattern="idpat">
+		<div class="col-xs-2">{{'taskname'|translate}}</div><input class="col-xs-10" type="text" ng-model="name" required ng-pattern="namepat">
+		<input class="pull-left" type="submit" value="{{'add'|translate}}" ng-hide="addadd" >
+	</form>
+	<input class="pull-right" type="button" value="{{'cancel'|translate}}" ng-hide="addadd" ng-click="cancel()">
+
+</div>
